@@ -84,13 +84,43 @@ class TapMusicApp extends Component {
 
             const createBubbles = (index) => {
                 const bubble = document.createElement("div");
+                let newContent;                 
+
+                switch(index) {
+                    case 0:
+                        newContent = document.createTextNode("S"); 
+                      break;
+                    case 1:
+                        newContent = document.createTextNode("D"); 
+                      break;
+                    case 2:
+                        newContent = document.createTextNode("F"); 
+                      break;
+                    case 3:
+                        newContent = document.createTextNode("G"); 
+                      break;
+                    case 4:
+                        newContent = document.createTextNode("H"); 
+                      break;
+                    case 5:
+                        newContent = document.createTextNode("J"); 
+                      break;
+                    default:
+                  } 
+
+                bubble.appendChild(newContent);
                 visual.appendChild(bubble);
                 bubble.style.backgroundColor = colors[index];
-                bubble.style.animation = " jump 1s ease"; 
+                bubble.style.animation = " jump 10s ease"; 
             }
 
             console.log(sounds);
         }); 
+    }
+
+    stopSounds(e) {
+        console.log('stop sounds');
+        window.location.reload();
     }
 
     render() {
@@ -104,7 +134,7 @@ class TapMusicApp extends Component {
                         <h1>Izzy's Music App</h1>
                         <p>Make music on Tap! </p>
                     
-                    <div className="visual"><button>Stop sounds</button></div>
+                    <div className="visual"><button onClick={this.stopSounds}>Stop Music</button></div>
                     </header>
 
                     <div className="pads">
