@@ -11,6 +11,7 @@ body {
 .app {
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -28,15 +29,18 @@ header p {
 
 .pads {
     background: lightblue;
-    width: 100%;
+    width: 60%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .pads > div {
     height: 100px;
-    width: 100px;
-    flex: 1;
-    justify-content: center;
+    /* flex: 1; */
+    margin: 20px;
+    flex-basis: 200px;
+    
+
 }
 
 .pads > div > h1 {
@@ -88,7 +92,7 @@ header p {
       }
       50% {
         bottom: 20%;
-        left: 90%;
+        left: 90%; 
       }
       75% {
         bottom: 20%;
@@ -100,3 +104,4 @@ header p {
       }
 }
 
+    

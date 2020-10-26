@@ -27,8 +27,31 @@ class TapMusicApp extends Component {
             ]
 
             document.addEventListener('keydown', function(event) {
-                console.log('Keydown event');
 
+                //Mapping keys to idexes to identify each drum pad.
+                
+                const keyMap =  [{"w": "0"}, {"ew": "1"}];
+                
+                // const keyMap = {
+                //     "w": "0", "e": "1", "r": "3", "t": "4", "y": "5", "u": "6", "i": "7",
+                //     "s": "8", "d": "9", "f": "10", "g": "11", "h": "12", "j": "13", "k": "14",
+                //     "z": "15", "x": "16", "c": "17", "v": "18", "b": "19", "n": "20", "m": "21"
+                // }
+
+                // console.log('Keydown event' + keyMap[1].w);
+                // console.log('keyMap[event.key]): ' + keyMap[event.key]);
+
+
+                    switch (event.key) {
+                        case 's': 
+                            sounds[keyMap[event.key]].currentTime=0;
+                            sounds[keyMap[event.key]].play();
+                            break;
+                        
+                        default: 
+                    }
+
+                    
                     if (event.key === 's') {
                         sounds[0].currentTime = 0;
                         sounds[0].play();
@@ -71,6 +94,7 @@ class TapMusicApp extends Component {
                         createBubbles(5);
                     }
                   })
+                  
 
             pads.forEach((pad, index) => {
 
@@ -87,28 +111,16 @@ class TapMusicApp extends Component {
                 let newContent;                 
 
                 switch(index) {
-                    case 0:
-                        newContent = document.createTextNode("S"); 
-                      break;
-                    case 1:
-                        newContent = document.createTextNode("D"); 
-                      break;
-                    case 2:
-                        newContent = document.createTextNode("F"); 
-                      break;
-                    case 3:
-                        newContent = document.createTextNode("G"); 
-                      break;
-                    case 4:
-                        newContent = document.createTextNode("H"); 
-                      break;
-                    case 5:
-                        newContent = document.createTextNode("J"); 
-                      break;
-                    default:
+                    case 0: newContent = document.createTextNode("S"); break;
+                    case 1: newContent = document.createTextNode("D"); break;
+                    case 2: newContent = document.createTextNode("F"); break;
+                    case 3: newContent = document.createTextNode("G"); break;
+                    case 4: newContent = document.createTextNode("H"); break;
+                    case 5: newContent = document.createTextNode("J"); break;
+                    default: break;
                   } 
 
-                bubble.appendChild(newContent);
+                bubble.appendChild(newContent); //---
                 visual.appendChild(bubble);
                 bubble.style.backgroundColor = colors[index];
                 bubble.style.animation = " jump 10s ease"; 
@@ -159,6 +171,94 @@ class TapMusicApp extends Component {
                             <audio className="sound" src={Grid}></audio>
                         </div>
                         <div className="pad6">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad7">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad1">
+                            <h1>s</h1>
+                            <audio className="sound" src={LostInTtheWaves}></audio>
+                        </div>
+                        <div className="pad2">
+                            <h1>d</h1>
+                            <audio className="sound" src={Kick1}></audio>
+                        </div>
+                        <div className="pad3">
+                            <h1>f</h1>
+                            <audio className="sound" src={Snare}></audio>
+                        </div>
+                        <div className="pad4">
+                            <h1>g</h1>
+                            <audio className="sound" src={Hat}></audio>
+                        </div>
+                        <div className="pad5">
+                            <h1>h</h1>
+                            <audio className="sound" src={Grid}></audio>
+                        </div>
+                        <div className="pad6">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad7">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad8">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad9">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad10">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad11">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad12">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad13">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad14">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad15">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad16">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad17">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad18">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad19">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad20">
+                            <h1>j</h1>
+                            <audio className="sound" src={Crash}></audio>   
+                        </div>
+                        <div className="pad21">
                             <h1>j</h1>
                             <audio className="sound" src={Crash}></audio>   
                         </div>
